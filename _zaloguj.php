@@ -10,13 +10,6 @@
 session_start();
 
 
-if(isset($_SESSION['admin']))
-{
-	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
-	exit();
-}
-
-
 if((!isset($_POST['login']))||(!isset($_POST['password'])))
 {
 	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
