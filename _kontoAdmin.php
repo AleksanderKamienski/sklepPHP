@@ -48,7 +48,7 @@ else
    
 	<div class="calosc"> 
         <div class="naglowek">SKLEP INTERNETOWY "MAJSTER"
-            </div> 
+        </div> 
         <div class="menu"> 
 			<form name ="koszyk" method = post  action ="https://demo-php-store.herokuapp.com/_koszyk.php">
             <h2>Sprawdź swój koszyk</h2> 
@@ -126,8 +126,9 @@ else
 			<table>
 			</form>
         </div> 
-		
-		<div class="stopka">W razie pytań prosimy o kontakt! e-mail: sklep-majster@gmail.com, telefon: 000 000 000</div>
+
+	</div>
+	<div class="stopka">W razie pytań prosimy o kontakt! e-mail: sklep-majster@gmail.com, telefon: 000 000 000
 	</div>
 </body>
 </html>
