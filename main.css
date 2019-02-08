@@ -18,6 +18,16 @@
             background: #00ff21;
             border: solid 3px #003399;
         }
+		
+		.tabelka {
+            width: 400px;
+            float: right;
+            color: #000;
+            text-align: left;
+            padding: 10px;
+            background: #00ff21;
+            border: solid 3px #003399;
+        }
 
         .tresc {
             width: 724px;
