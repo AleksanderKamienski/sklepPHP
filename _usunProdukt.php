@@ -1,7 +1,7 @@
 <?PHP
 session_start();
 
-if(!isset($_SESSION['zalogowany']))
+if(!(isset($_SESSION['zalogowany'])==true))
 {
 	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
 	exit();
