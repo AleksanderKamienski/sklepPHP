@@ -99,7 +99,8 @@ else
 		</div> 
 				   <div class="menu"> 
 			<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">
-            <h2>Zmień cenęp roduktów</h2> 
+            <h2>Zmień cenę produktów</h2> 
+			<table>
 					<tr>
 						<td>Produkt:</td>
 						<!--<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>-->
@@ -122,6 +123,7 @@ else
 						<td></td>
 						<td><input style="padding:10px;margin:20px;" name="przycisk" type="submit" value="Zmień" /></td> 
 					</tr>
+			<table>
 			</form>
         </div> 
 		<div class="stopka">W razie pytań prosimy o kontakt! e-mail: sklep-majster@gmail.com, telefon: 000 000 000</div>
