@@ -78,12 +78,12 @@ else
 				  </tr>	
 				  
 				<?php foreach ($rezultat as $wartosc) : ?>
-				<tr>
-					<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
-					<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg" alt=htmlspecialchars($wartosc['NAZWA']) ?> ></td>
-					<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
-				</tr>
-				<?php endforeach ?>
+					<tr>
+						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
+						<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>
+						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
+					</tr>
+					<?php endforeach ?>
 				  
 				  <tr> 
 				  <td></td>
