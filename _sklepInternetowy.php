@@ -31,7 +31,7 @@ $name = $surname = $login = $password = $email = $city = $zipCode = $street = $h
             </div> 
         <div class="menu"> 
             <h2>Zaloguj się</h2> 
-			<form name="myFormLogin" method="post" action="https://demo-php-store.herokuapp.com/zaloguj.php"> 
+			<form name="myFormLogin" method="post" action="https://demo-php-store.herokuapp.com/_zaloguj.php"> 
 			Login: <input type="text" name="login" maxlength = "30">
 			<br></br>
 			Hasło: <input type="password" name="password" maxlength = "30">
