@@ -86,7 +86,7 @@ else
 				<h1>Formularz rejestracyjny</h1>
 					<p><span class="error">* wymagane pola</span></p>
 
-					 <form name="myForm" method="post" action="https://demo-php-store.herokuapp.com/_zapisujemy.php" onsubmit="return validateForm();"> 
+					 <form name="myForm" method="post" action="https://demo-php-store.herokuapp.com/_zapisujemy.php" onsubmit="return validateForm2();"> 
 
 
   

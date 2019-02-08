@@ -56,13 +56,38 @@ else
 			<td><input type="submit" value="Sprawdź koszyk"/></td>
 			</form>
         </div> 
+		   <div class="menu"> 
+			<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">
+            <h2>Zmień cenęp roduktów</h2> 
+					<tr>
+						<td>Produkt:</td>
+						<!--<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>-->
+						<td>Cena:</td>
+						<td>Zaznacz aby zmienić cenę</td>
+						<td>Wpisz nową cenę</td>
+					</tr>
+				<?php foreach ($rezultat as $wartosc) : ?>
+					<tr>
+						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
+						<!--<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>-->
+						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
+						<td><input type="checkbox" name="lista1[]" value=<?=$wartosc["ID"]?>/></td>
+						<td><input type="text" name="lista2[]" ></td>
+					</tr>
+					<?php endforeach ?>
+					<tr> 
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><input style="padding:10px;margin:20px;" name="przycisk" type="submit" value="Zmień" /></td> 
+					</tr>
+			</form>
+        </div> 
         <div class="tresc"> 
 			
 			<h2>Zalogowałeś się jako administrator</h2> 
 			
 			<?php
-			echo ("LOGIN: ");
-			echo ($_SESSION["user"]. " ");
 			echo '[<a href="https://demo-php-store.herokuapp.com/_logout.php">Wyloguj sie!</a>]</p>';
 			?>
 			<form name ="dodajProdukt" method = post action = "https://demo-php-store.herokuapp.com/_dodajprodukt.php">
