@@ -17,9 +17,14 @@
 <?php
 // define variables and set to empty values
 session_start();
-if(isset(($_SESSION['zalogowany']))&&($_SESSION['zalogowany']==true))
+if(isset($_SESSION['user']))
 {
 	header('Location: https://demo-php-store.herokuapp.com/_konto.php');
+	exit();	
+}
+if(isset($_SESSION['admin']))
+{
+	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
 	exit();	
 }
 $name = $surname = $login = $password = $email = $city = $zipCode = $street = $houseNumber = $flatNumber = $education = "";

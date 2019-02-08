@@ -24,6 +24,12 @@
 
 session_start();
 
+if(!isset($_SESSION['zalogowany']))
+{
+	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
+	exit();
+}
+
 echo '[<a href="https://demo-php-store.herokuapp.com/_logout.php">Wyloguj sie!</a>]</p>';
 echo '[<a href="https://demo-php-store.herokuapp.com/_konto.php">Wróć do dodawania produktów!</a>]</p>';
 $SUMA = 0;

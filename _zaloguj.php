@@ -16,6 +16,8 @@ if((!isset($_POST['login']))||(!isset($_POST['password'])))
 	exit();
 }
 
+
+
 require_once "_connect.php";
 
 
@@ -43,9 +45,13 @@ else
 			{
 				$_SESSION['admin'] = true;
 			}
+			else
+			{
+				$_SESSION['user'] = $wiersz["LOGIN"];
+			}
 			$_SESSION['zalogowany'] = true;
 			$_SESSION['id']=$wiersz['ID'];
-			$_SESSION['user'] = $wiersz["LOGIN"];
+			
 			
 			unset($_SESSION['blad']);
 			$rezultat->free_result();
