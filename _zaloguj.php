@@ -11,11 +11,11 @@ session_start();
 
 if((!isset($_POST['login']))||(!isset($_POST['password'])))
 {
-	header('Location: sklepInternetowy.php');
+	header('Location: _sklepInternetowy.php');
 	exit();
 }
 
-require_once "connect.php";
+require_once "_connect.php";
 
 
 $polaczenie = @new mysqli($host,$db_user, $db_password, $db_name);
@@ -48,14 +48,14 @@ else
 			
 			unset($_SESSION['blad']);
 			$rezultat->free_result();
-			header('Location: gra.php');
+			header('Location: _konto.php');
 
 		}
 		else
 		{
 			
 			$_SESSION['blad'] = '<span style="color:red">Nieprawidolowy login lub haslo!</span>';
-			header('Location: sklepInternetowy.php');
+			header('Location: _sklepInternetowy.php');
 		}
 	}
 	

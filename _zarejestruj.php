@@ -1,6 +1,6 @@
 ﻿<?PHP
 session_start();
-require_once "connect.php";
+require_once "_connect.php";
 $polaczenie = @new mysqli($host,$db_user, $db_password, $db_name);
 if($polaczenie->connect_errno!=0)
 {
@@ -18,7 +18,7 @@ else
 		if($ilu_userow > 0)
 		{
 			$_SESSION['blad_rejestracja'] = '<span style="color:red">Taki login juz istnieje</span>';
-			header('Location: sklepInternetowy.php');
+			header('Location: _sklepInternetowy.php');
 
 		}
 		else
@@ -36,7 +36,7 @@ else
 				}
 				echo $zapytanie;
 				$polaczenie->query($zapytanie);
-				$link_pokaz="http://localhost/Lekcja4/sklepInternetowy.php";
+				$link_pokaz="http://localhost/Lekcja4/_sklepInternetowy.php";
 							
 		}
 	}

@@ -23,11 +23,11 @@
 <?PHP
 
 session_start();
-echo '[<a href="logout.php">Wyloguj sie!</a>]</p>';
-echo '[<a href="gra.php">Wróć do dodawania produktów!</a>]</p>';
+echo '[<a href="_logout.php">Wyloguj sie!</a>]</p>';
+echo '[<a href="_konto.php">Wróć do dodawania produktów!</a>]</p>';
 $SUMA = 0;
 
-require_once "connect.php";
+require_once "_connect.php";
 
 $polaczenie = @new mysqli($host,$db_user, $db_password, $db_name);
 if($polaczenie->connect_errno!=0)
@@ -40,44 +40,8 @@ else
 	$sql = "SELECT dp.ID as ID, CENA, NAZWA FROM produkty p, daneosobowe_produkty dp 
 	where dp.ID_PRODUKT = p.ID and dp.ID_OSOBA=".$_SESSION["id"]."";
 	
-	if($rezultat = $polaczenie->query($sql))
-	{	
-		/*
-		$SUMA = 0;
-		//echo ($tablica['NAZWA']);
-		echo "<table>";
-		
-		echo "<tr>";
-		echo "<td>"."Produkt:"."</td>";
-		echo "<td>"."Cena:"."</td>";
-		echo "</tr>";
-			
-		foreach( $rezultat as $wartosc)
-		{
-			echo "<tr>";
-			echo "<td>".$wartosc['NAZWA']."</td>";
-			echo "<td>".$wartosc['CENA']."</td>";
-			echo "<td>".$wartosc['ID']."</td>";
-			echo "</tr>";
-			$SUMA = $SUMA + $wartosc['CENA'];
-		}
-		
-		echo "<tr>";
-		echo "<td>"."SUMA"."</td>";
-		echo "<td>".$SUMA."</td>";
-		echo "</tr>";
-		
-		echo "<tr>";
-		echo "<td>"."SUMA"."</td>";
-		echo "<td>".$SUMA."</td>";
-		echo "</tr>";
-		
-		echo "</table>";
-		$i = 0;
-		//$SUMA = 0;
-		*/
-		
-	}
+	$rezultat = $polaczenie->query($sql);
+
 }
 	
 ?>
@@ -86,7 +50,7 @@ else
 			
 Produkty, które znajdują się w Państwa koszyku:
 			<br></br>
-			<form name ="dodajProdukt" method = post action = "http://localhost/Lekcja4/usunProdukt.PHP">
+			<form name ="dodajProdukt" method = post action = "http://localhost/Lekcja4/_usunProdukt.PHP">
 				<table style="width:40%">
 					<tr>
 						<td>Produkt:</td>

@@ -17,16 +17,7 @@
 
 
 session_start();
-if(!isset($_SESSION['zalogowany']))
-{
-	header('Location: sklepInternetowy.php');
-	exit();
-}
-if(isset($_SESSION['admin']))
-{
-	header('Location: kontoAdmin.php');
-	exit();
-}
+
 
 ?>
    
@@ -34,21 +25,21 @@ if(isset($_SESSION['admin']))
         <div class="naglowek">SKLEP INTERNETOWY "MAJSTER"
             </div> 
         <div class="menu"> 
-			<form name ="koszyk" method = post  action ="http://localhost/Lekcja4/koszyk.PHP">
+			<form name ="koszyk" method = post  action ="http://localhost/Lekcja4/_koszyk.PHP">
             <h2>Sprawdź swój koszyk</h2> 
 			<td><input type="submit" value="Sprawdź koszyk"/></td>
 			</form>
         </div> 
         <div class="tresc"> 
 			
-			<h2>Zalogowałeś się</h2> 
+			<h2>Zalogowałeś się jako administrator</h2> 
 			
 			<?php
-			echo ("WITAJ". " ");
+			echo ("LOGIN: ");
 			echo ($_SESSION["user"]. " ");
-			echo '[<a href="logout.php">Wyloguj sie!</a>]</p>';
+			echo '[<a href="_logout.php">Wyloguj sie!</a>]</p>';
 			?>
-			<form name ="dodajProdukt" method = post action = "http://localhost/Lekcja4/dodajprodukt.PHP">
+			<form name ="dodajProdukt" method = post action = "http://localhost/Lekcja4/_dodajprodukt.PHP">
 
             Produkty, które mogą państwo u nas kupić:
 			<br></br>
@@ -149,9 +140,9 @@ if(isset($_SESSION['admin']))
 				 </table>
 			</form>
 		
-        <div class="stopka">W razie pytań prosimy o kontakt! e-mail: sklep-majster@gmail.com, telefon: 000 000 000
+        
 		</div> 
-		
+		<div class="stopka">W razie pytań prosimy o kontakt! e-mail: sklep-majster@gmail.com, telefon: 000 000 000</div>
     </div>
 </body>
 </html>

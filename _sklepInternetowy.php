@@ -19,7 +19,7 @@
 session_start();
 if(isset(($_SESSION['zalogowany']))&&($_SESSION['zalogowany']==true))
 {
-	header('Location: gra.php');
+	header('Location: _konto.php');
 	exit();	
 }
 $name = $surname = $login = $password = $email = $city = $zipCode = $street = $houseNumber = $flatNumber = $education = "";
@@ -31,7 +31,7 @@ $name = $surname = $login = $password = $email = $city = $zipCode = $street = $h
             </div> 
         <div class="menu"> 
             <h2>Zaloguj się</h2> 
-			<form name="myFormLogin" method="post" action="http://localhost/Lekcja4/zaloguj.PHP"> 
+			<form name="myFormLogin" method="post" action="http://localhost/Lekcja4/_zaloguj.PHP"> 
 			Login: <input type="text" name="login" maxlength = "30">
 			<br></br>
 			Hasło: <input type="password" name="password" maxlength = "30">
@@ -121,7 +121,7 @@ $name = $surname = $login = $password = $email = $city = $zipCode = $street = $h
 				<h1>Formularz rejestracyjny</h1>
 					<p><span class="error">* wymagane pola</span></p>
 
-					 <form name="myForm" method="post" action="http://localhost/Lekcja4/zapisujemy.PHP" onsubmit="return validateForm();"> 
+					 <form name="myForm" method="post" action="http://localhost/Lekcja4/_zapisujemy.PHP" onsubmit="return validateForm();"> 
 
 
   
