@@ -38,7 +38,7 @@ if($polaczenie->connect_errno!=0)
 else
 {
 	
-	$sql = "SELECT NAZWA, CENA FROM produkty";
+	$sql = "SELECT ID, NAZWA, CENA FROM produkty";
 	
 	$rezultat = $polaczenie->query($sql);
 
@@ -82,6 +82,7 @@ else
 						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
 						<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>
 						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
+						<td><input type="checkbox" name="lista[]" value=<?=$wartosc["ID"]?>/></td>
 					</tr>
 					<?php endforeach ?>
 				  
