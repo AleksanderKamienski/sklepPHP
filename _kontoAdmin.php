@@ -22,6 +22,11 @@ if(!(isset($_SESSION['zalogowany'])==true))
 	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
 	exit();
 }
+if($_SESSION['admin']!=true)
+{
+	header('Location: https://demo-php-store.herokuapp.com/_konto.php');
+	exit();
+}
 
 
 ?>
