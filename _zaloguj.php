@@ -19,15 +19,12 @@ if((!isset($_POST['login']))||(!isset($_POST['password'])))
 
 
 require_once "_connect.php";
-session_unset();
-session_start();
 
 $polaczenie = @new mysqli($host,$db_user, $db_password, $db_name);
 
 if($polaczenie->connect_errno!=0)
 {
 	echo "Error: ".$polaczenie->connect_errno;
-	echo "aaaa";
 }
 else
 {
