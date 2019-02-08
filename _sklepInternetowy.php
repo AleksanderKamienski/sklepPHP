@@ -22,7 +22,7 @@ if(isset($_SESSION['user'])==true)
 	header('Location: https://demo-php-store.herokuapp.com/_konto.php');
 	exit();	
 }
-if($_SESSION['admin']==true)
+if(isset($_SESSION['admin']) and $_SESSION['admin']==true)
 {
 	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
 	exit();	
@@ -39,7 +39,7 @@ if($polaczenie->connect_errno!=0)
 else
 {
 	
-	$sql = "SELECT * FROM produkty";
+	$sql = "SELECT NAZWA, CENA FROM produkty";
 	
 	$rezultat = $polaczenie->query($sql);
 
@@ -76,7 +76,8 @@ else
 				<?php foreach ($rezultat as $wartosc) : ?>
 					<tr>
 						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
-						<td><?= htmlspecialchars($wartosc['CENA']) ?></td>
+						<td><img class="obraz" src=<?="".$wartosc["NAZWA"]."jpg"?> alt="MLOTEK" ></td>
+						<td><?= echo "cena:" htmlspecialchars($wartosc['CENA']) ?></td>
 					</tr>
 					<?php endforeach ?>
 				  <tr>
