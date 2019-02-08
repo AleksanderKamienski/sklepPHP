@@ -22,7 +22,7 @@ if(!isset($_SESSION['zalogowany']))
 	header('Location: sklepInternetowy.php');
 	exit();
 }
-if($_SESSION['admin'])
+if(isset($_SESSION['admin']))
 {
 	header('Location: kontoAdmin.php');
 	exit();
