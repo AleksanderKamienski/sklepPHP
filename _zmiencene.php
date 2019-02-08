@@ -42,69 +42,74 @@ if($polaczenie->connect_errno!=0)
 }
 else
 {
-	if ($_POST["MLOTEK"] != NULL)
+	if ($_POST["MLOTEK"].is_numeric())
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["MLOTEK"]". WHERE id=1;";
+			$sql="UPDATE produkty SET cena=".$_POST["MLOTEK"]." WHERE id=1;";
 			$polaczenie->query($sql);
 		}
+	else 
+	{
+		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
+			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
+	}
 	if ($_POST["WIERTARKA"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["WIERTARKA"]". WHERE id=2;";
+			$sql="UPDATE produkty SET cena=".$_POST["WIERTARKA"]." WHERE id=2;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["GWOZDZIE"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["GWOZDZIE"]". WHERE id=3;";
+			$sql="UPDATE produkty SET cena=".$_POST["GWOZDZIE"]." WHERE id=3;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["LOM"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["LOM"]". WHERE id=4;";
+			$sql="UPDATE produkty SET cena=".$_POST["LOM"]." WHERE id=4;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["PILARKA"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["PILARKA"]". WHERE id=5;";
+			$sql="UPDATE produkty SET cena=".$_POST["PILARKA"]." WHERE id=5;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["BRZESZCZOT"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["BRZESZCZOT"]". WHERE id=6;";
+			$sql="UPDATE produkty SET cena=".$_POST["BRZESZCZOT"]." WHERE id=6;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["SUWMIARKA"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["SUWMIARKA"]". WHERE id=7;";
+			$sql="UPDATE produkty SET cena=".$_POST["SUWMIARKA"]." WHERE id=7;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["OLOWEK"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["OLOWEK"]". WHERE id=8;";
+			$sql="UPDATE produkty SET cena=".$_POST["OLOWEK"]." WHERE id=8;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["HEBEL"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["HEBEL"]". WHERE id=9;";
+			$sql="UPDATE produkty SET cena=".$_POST["HEBEL"]." WHERE id=9;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["SRUBOKRET"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["SRUBOKRET"]". WHERE id=10;";
+			$sql="UPDATE produkty SET cena=".$_POST["SRUBOKRET"]." WHERE id=10;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["KOMBINERKI"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["ELEKTRODY"]". WHERE id=11;";
+			$sql="UPDATE produkty SET cena=".$_POST["ELEKTRODY"]." WHERE id=11;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["ELEKTRODY"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["ELEKTRODY"]". WHERE id=12;";
+			$sql="UPDATE produkty SET cena=".$_POST["ELEKTRODY"]." WHERE id=12;";
 			$polaczenie->query($sql);
 		}
 	if ($_POST["KATOWKA"] != NULL)
 		{
-			$sql="UPDATE produkty SET cena=."$_POST["KATOWKA"]". WHERE id=13;";
+			$sql="UPDATE produkty SET cena=".$_POST["KATOWKA"]." WHERE id=13;";
 			$polaczenie->query($sql);
 		}
 		
@@ -127,7 +132,7 @@ else
 		}*/
 	
 	
-	//header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
+	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
 	$polaczenie->close();
 
 }
