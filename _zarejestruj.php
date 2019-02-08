@@ -49,21 +49,5 @@ else
 	$polaczenie->close();
 	}
 }
-
+header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-<title> Szablon HTML </title>
-<meta http-equiv="Content-type" content="text/html; charset=iso-8859-2">
-<meta name="Description" content=" [wstaw tu opis strony] ">
-<meta name="Keywords" content=" [wstaw tu slowa kluczowe] ">
-<meta name="Author" content=" [dane autora] ">
-</head>
-<body>
-<?PHP header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');?>
-<br></br>
-
-</body>
-</html>
