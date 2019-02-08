@@ -17,12 +17,12 @@
 <?php
 // define variables and set to empty values
 session_start();
-if(isset($_SESSION['user']))
+if(isset($_SESSION['user'])==true)
 {
 	header('Location: https://demo-php-store.herokuapp.com/_konto.php');
 	exit();	
 }
-if(isset($_SESSION['admin']))
+if(isset($_SESSION['admin'])==true)
 {
 	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
 	exit();	
