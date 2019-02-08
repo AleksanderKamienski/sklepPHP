@@ -103,6 +103,7 @@ else
 			<?php
 				if(isset($_SESSION['nie_numer']))
 				echo($_SESSION['nie_numer']);
+				echo "aaa";
 			?>
 			<table>
 					<tr>
