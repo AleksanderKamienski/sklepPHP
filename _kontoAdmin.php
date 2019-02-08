@@ -100,6 +100,10 @@ else
 		<div class="tabelka"> 
 			<form name ="zmien_cene" method = post  action ="http://localhost/Lekcja4/_zmiencene.php">
             <h2>Zmień cenę produktów, jeśli nie chcesz zmieniać zostaw puste pole</h2> 
+			<?php
+				if(isset($_SESSION['nie_numer']))
+				echo($_SESSION['nie_numer']);
+			?>
 			<table>
 					<tr>
 						<td>Produkt:</td>
