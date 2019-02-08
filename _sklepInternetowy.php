@@ -29,6 +29,24 @@ if($_SESSION['admin']==true)
 }
 $name = $surname = $login = $password = $email = $city = $zipCode = $street = $houseNumber = $flatNumber = $education = "";
 
+require_once "_connect.php";
+
+$polaczenie = @new mysqli($host,$db_user, $db_password, $db_name);
+if($polaczenie->connect_errno!=0)
+{
+	echo "Error: ".$polaczenie->connect_errno;
+}
+else
+{
+	
+	$sql = "SELECT * FROM produkty";
+	
+	$rezultat = $polaczenie->query($sql);
+
+}
+	
+?>
+
 ?>
 
     <div class="calosc"> 
@@ -55,6 +73,12 @@ $name = $surname = $login = $password = $email = $city = $zipCode = $street = $h
             Produkty, które mogą państwo u nas kupić:
 						<br></br>
 				<table style="width:100%">
+				<?php foreach ($rezultat as $wartosc) : ?>
+					<tr>
+						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
+						<td><?= htmlspecialchars($wartosc['CENA']) ?></td>
+					</tr>
+					<?php endforeach ?>
 				  <tr>
 					<td>młotek</td>
 					<td><img class="obraz" src="młotek.jpg" alt="młotek" ></td>
