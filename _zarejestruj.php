@@ -18,7 +18,7 @@ else
 		if($ilu_userow > 0)
 		{
 			$_SESSION['blad_rejestracja'] = '<span style="color:red">Taki login juz istnieje</span>';
-			header('Location: _sklepInternetowy.php');
+			header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
 
 		}
 		else
@@ -36,7 +36,7 @@ else
 				}
 				echo $zapytanie;
 				$polaczenie->query($zapytanie);
-				$link_pokaz="http://localhost/Lekcja4/_sklepInternetowy.php";
+				$link_pokaz="https://demo-php-store.herokuapp.com/_sklepInternetowy.php";
 							
 		}
 	}

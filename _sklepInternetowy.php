@@ -19,7 +19,7 @@
 session_start();
 if(isset(($_SESSION['zalogowany']))&&($_SESSION['zalogowany']==true))
 {
-	header('Location: _konto.php');
+	header('Location: https://demo-php-store.herokuapp.com/_konto.php');
 	exit();	
 }
 $name = $surname = $login = $password = $email = $city = $zipCode = $street = $houseNumber = $flatNumber = $education = "";
@@ -121,7 +121,7 @@ $name = $surname = $login = $password = $email = $city = $zipCode = $street = $h
 				<h1>Formularz rejestracyjny</h1>
 					<p><span class="error">* wymagane pola</span></p>
 
-					 <form name="myForm" method="post" action="http://localhost/Lekcja4/_zapisujemy.PHP" onsubmit="return validateForm();"> 
+					 <form name="myForm" method="post" action="https://demo-php-store.herokuapp.com/_zapisujemy.php" onsubmit="return validateForm();"> 
 
 
   

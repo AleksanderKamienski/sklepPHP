@@ -23,8 +23,8 @@
 <?PHP
 
 session_start();
-echo '[<a href="_logout.php">Wyloguj sie!</a>]</p>';
-echo '[<a href="_konto.php">Wróć do dodawania produktów!</a>]</p>';
+echo '[<a href="https://demo-php-store.herokuapp.com/_logout.php">Wyloguj sie!</a>]</p>';
+echo '[<a href="https://demo-php-store.herokuapp.com/_konto.php">Wróć do dodawania produktów!</a>]</p>';
 $SUMA = 0;
 
 require_once "_connect.php";
@@ -50,7 +50,7 @@ else
 			
 Produkty, które znajdują się w Państwa koszyku:
 			<br></br>
-			<form name ="dodajProdukt" method = post action = "http://localhost/Lekcja4/_usunProdukt.PHP">
+			<form name ="dodajProdukt" method = post action = "https://demo-php-store.herokuapp.com/_usunProdukt.php">
 				<table style="width:40%">
 					<tr>
 						<td>Produkt:</td>

@@ -19,12 +19,12 @@
 session_start();
 if(!isset($_SESSION['zalogowany']))
 {
-	header('Location: _sklepInternetowy.php');
+	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
 	exit();
 }
 if(isset($_SESSION['admin']))
 {
-	header('Location: _kontoAdmin.php');
+	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
 	exit();
 }
 
@@ -34,7 +34,7 @@ if(isset($_SESSION['admin']))
         <div class="naglowek">SKLEP INTERNETOWY "MAJSTER"
         </div> 
         <div class="menu"> 
-			<form name ="koszyk" method = post  action ="http://localhost/Lekcja4/_koszyk.PHP">
+			<form name ="koszyk" method = post  action ="https://demo-php-store.herokuapp.com/_koszyk.php">
             <h2>Sprawdź swój koszyk</h2> 
 			<td><input type="submit" value="Sprawdź koszyk"/></td>
 			</form>
@@ -46,9 +46,9 @@ if(isset($_SESSION['admin']))
 			<?php
 			echo ("WITAJ". " ");
 			echo ($_SESSION["user"]. " ");
-			echo '[<a href="_logout.php">Wyloguj sie!</a>]</p>';
+			echo '[<a href="https://demo-php-store.herokuapp.com/_logout.php">Wyloguj sie!</a>]</p>';
 			?>
-			<form name ="dodajProdukt" method = post action = "http://localhost/Lekcja4/_dodajprodukt.PHP">
+			<form name ="dodajProdukt" method = post action = "https://demo-php-store.herokuapp.com/_dodajprodukt.php">
 
             Produkty, które mogą państwo u nas kupić:
 			<br></br>

@@ -18,12 +18,12 @@ else
 		$sql="INSERT INTO DANEOSOBOWE_PRODUKTY (ID_OSOBA, ID_PRODUKT) VALUES (".$_SESSION["id"].",'" .$wartosc."')";
 		
 		$rezultat = @$polaczenie->query($sql);
-		header('Location: _konto.php');
+		header('Location: https://demo-php-store.herokuapp.com/_konto.php');
 	
 	
 		}
 	}
-	header('Location: _konto.php');
+	header('Location: https://demo-php-store.herokuapp.com/_konto.php');
 	$polaczenie->close();
 }
 

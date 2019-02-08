@@ -11,7 +11,7 @@ session_start();
 
 if((!isset($_POST['login']))||(!isset($_POST['password'])))
 {
-	header('Location: _sklepInternetowy.php');
+	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
 	exit();
 }
 
@@ -48,14 +48,14 @@ else
 			
 			unset($_SESSION['blad']);
 			$rezultat->free_result();
-			header('Location: _konto.php');
+			header('Location: https://demo-php-store.herokuapp.com/_konto.php');
 
 		}
 		else
 		{
 			
 			$_SESSION['blad'] = '<span style="color:red">Nieprawidolowy login lub haslo!</span>';
-			header('Location: _sklepInternetowy.php');
+			header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
 		}
 	}
 	

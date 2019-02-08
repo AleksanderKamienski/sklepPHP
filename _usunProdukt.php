@@ -19,12 +19,12 @@ else
 		$sql="delete from daneosobowe_produkty where daneosobowe_produkty.ID = ".$wartosc."";
 		$rezultat = @$polaczenie->query($sql);
 		
-			header('Location: _koszyk.php');
+			header('Location: https://demo-php-store.herokuapp.com/_koszyk.php');
 
 		}
 	
 	}
-	header('Location: _koszyk.php');
+	header('Location: https://demo-php-store.herokuapp.com/_koszyk.php');
 	$polaczenie->close();
 }
 
