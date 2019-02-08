@@ -62,8 +62,8 @@ else
 <meta name="Author" content=" [dane autora] ">
 </head>
 <body>
-Udało Ci się zarejestrować!
+<?PHP header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');?>
 <br></br>
-<a href="<?PHP echo $link_pokaz;?>">Przejdź do sklepu internetowego</a>
+
 </body>
 </html>
