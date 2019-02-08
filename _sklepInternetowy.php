@@ -22,7 +22,7 @@ if(isset($_SESSION['user'])==true)
 	header('Location: https://demo-php-store.herokuapp.com/_konto.php');
 	exit();	
 }
-if(isset($_SESSION['admin'])==true)
+if($_SESSION['admin']==true)
 {
 	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
 	exit();	
