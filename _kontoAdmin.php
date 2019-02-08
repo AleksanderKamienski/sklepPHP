@@ -111,9 +111,9 @@ else
 				<?php foreach ($rezultat as $wartosc) : ?>
 					<tr>
 						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
-						<!--<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>-->
+						
 						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
-						<td><input type="text" name="lista[]" maxlength = "4" value=<?= htmlspecialchars($wartosc['ID']) ></td>
+						<td><input type="text" name="lista[]" maxlength = "4" value=<?= htmlspecialchars($wartosc['ID'])?> ></td>
 					</tr>
 					<?php endforeach ?>
 					<tr> 
