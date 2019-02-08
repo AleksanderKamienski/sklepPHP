@@ -24,8 +24,6 @@
 
 session_start();
 
-
-session_start();
 echo '[<a href="https://demo-php-store.herokuapp.com/_logout.php">Wyloguj sie!</a>]</p>';
 echo '[<a href="https://demo-php-store.herokuapp.com/_konto.php">Wróć do dodawania produktów!</a>]</p>';
 $SUMA = 0;
