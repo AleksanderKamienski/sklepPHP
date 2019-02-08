@@ -43,11 +43,10 @@ else
 	$rezultat = $polaczenie->query($sql);
 
 }
-	
-		
+
 ?>
    
-	
+	<div class="calosc"> 
         <div class="naglowek">SKLEP INTERNETOWY "MAJSTER"
             </div> 
         <div class="menu"> 
@@ -97,7 +96,8 @@ else
 		
         
 		</div> 
-				   <div class="tabelka"> 
+		
+		<div class="tabelka"> 
 			<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">
             <h2>Zmień cenę produktów</h2> 
 			<table>
@@ -126,6 +126,8 @@ else
 			<table>
 			</form>
         </div> 
+		
 		<div class="stopka">W razie pytań prosimy o kontakt! e-mail: sklep-majster@gmail.com, telefon: 000 000 000</div>
+	</div>
 </body>
 </html>
