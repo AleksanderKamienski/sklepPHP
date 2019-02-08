@@ -28,11 +28,7 @@ if(!isset($_SESSION['zalogowany']))
 	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
 	exit();
 }
-if(isset($_SESSION['admin']))
-{
-	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
-	exit();
-}
+
 
 session_start();
 echo '[<a href="https://demo-php-store.herokuapp.com/_logout.php">Wyloguj sie!</a>]</p>';
