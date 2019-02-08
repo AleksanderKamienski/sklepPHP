@@ -99,7 +99,7 @@ else
 		
 		<div class="tabelka"> 
 			<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">
-            <h2>Zmień cenę produktów</h2> 
+            <h2>Zmień cenę produktów, jeśli nie chcesz mieniać zostaw puste pole</h2> 
 			<table>
 					<tr>
 						<td>Produkt:</td>
@@ -113,8 +113,7 @@ else
 						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
 						<!--<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>-->
 						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
-						<td><input type="checkbox" name="lista1[]" value=<?=$wartosc["ID"]?>/></td>
-						<td><input type="text" name="lista2[]" ></td>
+						<td><input type="text" name="lista[]" maxlength = "4" value=<?= htmlspecialchars($wartosc['ID']) ></td>
 					</tr>
 					<?php endforeach ?>
 					<tr> 

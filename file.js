@@ -131,27 +131,3 @@ function validateForm() {
 
 }
 
-
-
-
-function validateFormNumber() {
-
-	//name
-
-	var x = document.forms["zmiencene"]["lista[]"].value;
-	
-	if (x == "") {
-		alert("Imie jest wymagane");
-		return false;
-		}
-
-	else if (!(/^[a-zA-Z]+$/.test(x)))
-	{
-		alert("W imieniu dozwolone są tylko niepolskie litery");
-		return false;
-	}
-	
-
-
-}
-
