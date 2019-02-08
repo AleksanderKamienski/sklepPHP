@@ -47,7 +47,6 @@ else
 	
 ?>
 
-?>
 
     <div class="calosc"> 
         <div class="naglowek">SKLEP INTERNETOWY "MAJSTER"
@@ -76,75 +75,11 @@ else
 				<?php foreach ($rezultat as $wartosc) : ?>
 					<tr>
 						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
-						<td><img class="obraz" src=<?="".$wartosc["NAZWA"]."jpg"?> alt="MLOTEK" ></td>
-						<td><?= echo "cena:" htmlspecialchars($wartosc['CENA']) ?></td>
+						<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"alt=htmlspecialchars($wartosc['NAZWA']) ?> ></td>
+						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
 					</tr>
 					<?php endforeach ?>
-				  <tr>
-					<td>młotek</td>
-					<td><img class="obraz" src="młotek.jpg" alt="młotek" ></td>
-					<td>cena : 10 zł</td>
-				  </tr>
-				  <tr>
-					<td>wiertarka</td>
-					<td><img class="obraz" src="wiertarka.jpg" alt="wiertarka"></td>
-					<td>cena : 100 zł</td>
-				  </tr>
-				  <tr>
-					<td>opakowanie gwoździ</td>
-					<td><img class="obraz" src="gwoździe.jpg" alt="gwoździe"></td>
-					<td>cena : 8 zł</td>
-				  </tr>
-				  <tr>
-					<td>łom</td>
-					<td><img class="obraz" src="łom.jpg" alt="łom"></td>
-					<td>cena : 40 zł</td>
-				  </tr>
-				  <tr>
-					<td>pilarka</td>
-					<td><img class="obraz" src="pilarka.jpg" alt="pilarka"></td>
-					<td>cena : 300 zł</td>
-				  </tr>
-				  <tr>
-					<td>brzeszczot</td>
-					<td><img class="obraz" src="brzeszczot.jpg" alt="brzeszczot"></td>
-					<td>cena : 15 zł</td>
-				  </tr>
-				  <tr>
-					<td>suwmiarka</td>
-					<td><img class="obraz" src="suwmiarka.jpg" alt="suwmiarka"></td>
-					<td>cena : 20 zł</td>
-				  </tr>
-				  <tr>
-					<td>ołówek</td>
-					<td><img class="obraz" src="ołówek.jpg" alt="ołówek" ></td>
-					<td>cena : 4 zł</td>
-				  </tr>
-				  <tr>
-					<td>hebel</td>
-					<td><img class="obraz" src="hebel.jpg" alt="hebel"></td>
-					<td>cena : 40 zł</td>
-				  </tr>
-				  <tr>
-					<td>śrubokręt</td>
-					<td><img class="obraz" src="śrubokręt.jpg" alt="śrubokręt"></td>
-					<td>cena : 25 zł</td>
-				  </tr>
-				  <tr>
-					<td>kombinerki</td>
-					<td><img class="obraz" src="kombinerki.jpg" alt="kombinerki" ></td>
-					<td>cena : 25 zł</td>
-				  </tr>
-				  <tr>
-					<td>elektrody</td>
-					<td><img class="obraz" src="elektrody.jpg" alt="elektrody" ></td>
-					<td>cena : 40 zł</td>
-				  </tr>
-				    <tr>
-					<td>kątówka</td>
-					<td><img class="obraz" src="kątówka.jpg" alt="kątówka" ></td>
-					<td>cena : 250 zł</td>
-				  </tr>
+				 
 				 </table>
         </div> 
 		<div class="menu"> 
