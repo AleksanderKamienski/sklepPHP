@@ -19,7 +19,7 @@ if((!isset($_POST['login']))||(!isset($_POST['password'])))
 
 
 require_once "_connect.php";
-
+session_unset();
 
 $polaczenie = @new mysqli($host,$db_user, $db_password, $db_name);
 
