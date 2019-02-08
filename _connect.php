@@ -6,4 +6,5 @@
 	$db_name = "m4z6hoy12c0q1t3f";
 
 
+header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
 ?>

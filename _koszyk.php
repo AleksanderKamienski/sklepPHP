@@ -23,6 +23,18 @@
 <?PHP
 
 session_start();
+if(!isset($_SESSION['zalogowany']))
+{
+	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
+	exit();
+}
+if(isset($_SESSION['admin']))
+{
+	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
+	exit();
+}
+
+session_start();
 echo '[<a href="https://demo-php-store.herokuapp.com/_logout.php">Wyloguj sie!</a>]</p>';
 echo '[<a href="https://demo-php-store.herokuapp.com/_konto.php">Wróć do dodawania produktów!</a>]</p>';
 $SUMA = 0;
@@ -36,7 +48,7 @@ if($polaczenie->connect_errno!=0)
 }
 else
 {
-
+	
 	$sql = "SELECT dp.ID as ID, CENA, NAZWA FROM produkty p, daneosobowe_produkty dp 
 	where dp.ID_PRODUKT = p.ID and dp.ID_OSOBA=".$_SESSION["id"]."";
 	

@@ -1,5 +1,16 @@
 ﻿<?PHP
 session_start();
+if(!isset($_SESSION['zalogowany']))
+{
+	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
+	exit();
+}
+if(isset($_SESSION['admin']))
+{
+	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
+	exit();
+}
+
 require_once "_connect.php";
 $polaczenie = @new mysqli($host,$db_user, $db_password, $db_name);
 if($polaczenie->connect_errno!=0)
