@@ -126,9 +126,10 @@ else
 			<table>
 			</form>
         </div> 
+		<div class="stopka">W razie pytań prosimy o kontakt! e-mail: sklep-majster@gmail.com, telefon: 000 000 000
+		</div>
 
 	</div>
-	<div class="stopka">W razie pytań prosimy o kontakt! e-mail: sklep-majster@gmail.com, telefon: 000 000 000
-	</div>
+
 </body>
 </html>
