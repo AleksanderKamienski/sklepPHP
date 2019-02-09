@@ -100,11 +100,10 @@ else
 		<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">
 		<div class="tabelka">
 		<h2>Zmień cenę produktów:</h2> 
-			<h2>wpisz nową cenę i </h2>
-			<h2>wciśnij przycisk "zmień"</h2>
 			<?php
-				echo "Musisz podać liczbę dodatnią. Jeśli nie chcesz zmienić ceny pozostaw puste pole."
+				echo "Wpisz nową cenę i wciśnij przycisk 'Zmień'. Musisz podać liczbę dodatnią. Jeśli nie chcesz zmienić ceny pozostaw puste pole."
 			?>
+			<br>
 			<table>
 					<tr>
 						<td>Produkt:</td>
