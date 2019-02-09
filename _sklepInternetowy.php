@@ -66,6 +66,10 @@ else
 			?>
 			</form>
 			<h1>Formularz rejestracyjny</h1>
+			<?php
+				if(isset($_SESSION['blad_rejestracja']))
+				echo($_SESSION['blad_rejestracja']);
+			?>
 					<p><span class="error">* wymagane pola</span></p>
 
 					 <form name="myForm" method="post" action="https://demo-php-store.herokuapp.com/_zarejestruj.php" onsubmit="return validateForm();"> 
