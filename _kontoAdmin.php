@@ -103,8 +103,7 @@ else
 			<h2>wpisz nową cenę i </h2>
 			<h2>wciśnij przycisk "zmień"</h2>
 			<?php
-				if(isset($_SESSION['nie_numer']))
-				echo($_SESSION['nie_numer']);
+				echo "Musisz podać liczbę dodatnią. Jeśli nie chcesz zmienić ceny pozostaw puste pole."
 			?>
 			<table>
 					<tr>
