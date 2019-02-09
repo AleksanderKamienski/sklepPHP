@@ -1,11 +1,10 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML >
 <html>
 <head>
 	
 </head>
 <body>
 <?php
-// define variables and set to empty values
 
 session_start();
 
@@ -16,7 +15,6 @@ if((!isset($_POST['login']))||(!isset($_POST['password'])))
 	exit();
 	
 }
-
 
 require_once "_connect.php";
 

@@ -5,6 +5,4 @@
 	$db_password = "imkaai9dgkqwgqrx";
 	$db_name = "m4z6hoy12c0q1t3f";
 
-
-	
 ?>

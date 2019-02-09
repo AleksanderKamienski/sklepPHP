@@ -11,7 +11,6 @@ if(isset($_SESSION['admin']) and $_SESSION['admin']==true)
 	exit();	
 }
 
-
 require_once "_connect.php";
 $polaczenie = @new mysqli($host,$db_user, $db_password, $db_name);
 if($polaczenie->connect_errno!=0)

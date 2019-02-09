@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 	<script type="text/javascript" src="file.js"></script>
@@ -15,7 +15,7 @@
 <body>
 
 <?php
-// define variables and set to empty values
+
 session_start();
 if(isset($_SESSION['user'])==true)
 {
@@ -27,6 +27,7 @@ if(isset($_SESSION['admin']) and $_SESSION['admin']==true)
 	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
 	exit();	
 }
+
 $name = $surname = $login = $password = $email = $city = $zipCode = $street = $houseNumber = $flatNumber = $education = "";
 
 require_once "_connect.php";
@@ -38,15 +39,12 @@ if($polaczenie->connect_errno!=0)
 }
 else
 {
-	
 	$sql = "SELECT ID, NAZWA, CENA FROM produkty";
-	
 	$rezultat = $polaczenie->query($sql);
 
 }
 	
 ?>
-
 
     <div class="calosc"> 
         <div class="naglowek">SKLEP INTERNETOWY "MAJSTER"
@@ -73,9 +71,6 @@ else
 					<p><span class="error">* wymagane pola</span></p>
 
 					 <form name="myForm" method="post" action="https://demo-php-store.herokuapp.com/_zarejestruj.php" onsubmit="return validateForm();"> 
-
-
-  
 					  Imię: <input type="text" name="name" value="<?php echo $name;?>" maxlength = "30">
 					  <span class="error">* </span>
 					  <br><br>
@@ -103,13 +98,10 @@ else
 					  Numer domu: <input type="text" name="houseNumber" maxlength = "4" value="<?php echo $houseNumber;?>">
 					  <span class="error">* </span>
 					  <br><br>
-					  Numer mieszkania: <input type="text" maxlength = "4" name="flatNumber" value="<?php echo $flatNumber;?>">
-					  
+					  Numer mieszkania: <input type="text" maxlength = "4" name="flatNumber" value="<?php echo $flatNumber;?>"> 
 					  <p>
 					  <input type="submit" value="Zarejestruj się"/>
 					  </p>
-
-
 					  </form>			
         </div> 
         <div class="tresc"> 

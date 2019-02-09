@@ -13,9 +13,6 @@
          
         }
 	</style>
-  
-
- 
 
 </head>
 
@@ -53,8 +50,6 @@ else
 }
 	
 ?>
-
-
 			<div>
 			Produkty, które znajdują się w Państwa koszyku:
 			<br></br>
