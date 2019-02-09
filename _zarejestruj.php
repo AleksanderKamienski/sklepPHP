@@ -39,7 +39,6 @@ else
 						$zapytanie="insert into daneosobowe (imie,nazwisko,login,haslo,email,miasto,kod_pocztowy,ulica,numer_domu,numer_mieszkania) values
 						('".$_POST["name"]."','".$_POST["surname"]."','".$_POST["login"]."','".$_POST["password"]."','".$_POST["email"]."','".$_POST["city"]."','".$_POST["zipCode"]."','".$_POST["street"]."',".$_POST["houseNumber"].",".$_POST["flatNumber"].")";
 					}
-					echo $zapytanie;
 					$polaczenie->query($zapytanie);
 					$link_pokaz="https://demo-php-store.herokuapp.com/_sklepInternetowy.php";
 								
