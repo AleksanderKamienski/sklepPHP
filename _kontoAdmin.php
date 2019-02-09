@@ -128,7 +128,7 @@ else
         
 		</div> 
 		<!--<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">-->
-		<div>
+		<div class="menu">
 		<h2>Zmień cenę produktów:</h2> 
 			<h2>wpisz nową cenę i </h2>
 			<h2>wciśnij przycisk "zmień"</h2>
