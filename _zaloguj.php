@@ -31,6 +31,8 @@ else
 {
 	$login = $_POST['login'];
 	$haslo = $_POST['password'];
+	if(isset($_SESSION['blad']))
+	unset($_SESSION['blad']);
 	
 	$sql = "SELECT * FROM daneosobowe where login = '$login' and haslo = '$haslo'"; 
 	
@@ -53,7 +55,6 @@ else
 			$_SESSION['id']=$wiersz['ID'];
 			
 			
-			unset($_SESSION['blad']);
 			$rezultat->free_result();
 			header('Location: https://demo-php-store.herokuapp.com/_konto.php');
 
