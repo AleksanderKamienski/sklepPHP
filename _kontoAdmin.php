@@ -88,8 +88,8 @@ else
 				  <tr> 
 				  <td></td>
 				  <td></td>
-				  <td><input style="padding:10px;margin:20px;" name="przycisk" type="submit" value="Dodaj do koszyka" /></td>
 				  <td></td>
+				  <td><input style="padding:10px;margin:20px;" name="przycisk" type="submit" value="Dodaj do koszyka" /></td>
 				  
 				  </tr>
 				 </table>
@@ -124,8 +124,9 @@ else
 					<tr> 
 						<td></td>
 						<td></td>
-						<td></td>
 						<td><input style="padding:10px;margin:20px;" name="przycisk" type="submit" value="Zmień" /></td> 
+						<td></td>
+						
 					</tr>
 			<table>
 			</form>

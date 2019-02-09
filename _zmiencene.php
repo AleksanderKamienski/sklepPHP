@@ -23,8 +23,7 @@ session_start();
 
 
 
-if(isset($_SESSION['nie_numer']))
-$_SESSION['nie_numer'] = "";
+
 
 require_once "_connect.php";
 
@@ -172,7 +171,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["KATOWKA"]." WHERE id=13;";
 			$polaczenie->query($sql);
 		}
-	else if ($_POST["MLOTEK"]!="") 
+	else 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
