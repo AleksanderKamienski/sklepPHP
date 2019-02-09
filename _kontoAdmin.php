@@ -98,7 +98,7 @@ else
 		</div> 
 		<!--<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">-->
 		<div class="tabelka"> 
-			<form name ="zmien_cene" method = post  action ="http://localhost/Lekcja4/_zmiencene.php">
+			<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">
             <h2>Zmień cenę produktów, jeśli nie chcesz zmieniać zostaw puste pole</h2> 
 			<?php
 				if(isset($_SESSION['nie_numer']))
