@@ -89,7 +89,7 @@ else
 			<div>
 			Zamówienie:
 			<br></br>
-			<form name ="dodajProdukt" method="post" action="mailto:aleksanderkamienski.97@wp.pl?subject=zamowienie" enctype="text/plain" onsubmit="return validateFormEmail();">
+			<form name ="email" method="post" action="mailto:aleksanderkamienski.97@wp.pl?subject=zamowienie" enctype="text/plain" onsubmit="return validateFormEmail();">
 			Imię: <input type="text" name="name" value="<?php echo $name;?>" maxlength = "30">
 					  <span class="error">* </span>
 					  <br><br>

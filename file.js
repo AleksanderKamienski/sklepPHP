@@ -136,7 +136,7 @@ function validateFormEmail() {
 
 	//name
 
-	var x = document.forms["myForm"]["name"].value;
+	var x = document.forms["email"]["name"].value;
 	if (x == "") {
 		alert("Imie jest wymagane");
 		return false;
@@ -148,7 +148,7 @@ function validateFormEmail() {
 		return false;
 	}
 	//surname
-	x = document.forms["myForm"]["surname"].value;
+	x = document.forms["email"]["surname"].value;
 
 	if (x == "") {
 		alert("Nazwisko jest wymagane");
@@ -161,7 +161,7 @@ function validateFormEmail() {
 		return false;
 	}
 	//login
-	x = document.forms["myForm"]["login"].value;
+	x = document.forms["email"]["login"].value;
 
 	if (x == "") {
 		alert("Login jest wymagany");
@@ -176,7 +176,7 @@ function validateFormEmail() {
 	//password
 	
 
-	x = document.forms["myForm"]["email"].value;
+	x = document.forms["email"]["email"].value;
 
 	if (x == "") {
 		alert("Adres e-mail jest wymagany");
@@ -189,7 +189,7 @@ function validateFormEmail() {
 		return false;
 	}
 
-	x = document.forms["myForm"]["city"].value;
+	x = document.forms["email"]["city"].value;
 
 	if (x == "") {
 		alert("Miasto jest wymagane");
@@ -202,7 +202,7 @@ function validateFormEmail() {
 		return false;
 	}
 
-	x = document.forms["myForm"]["zipCode"].value;
+	x = document.forms["email"]["zipCode"].value;
 
 	if (x == "") {
 		alert("Kod pocztowy jest wymagany");
@@ -215,7 +215,7 @@ function validateFormEmail() {
 		return false;
 	}
 	
-	x = document.forms["myForm"]["street"].value;
+	x = document.forms["email"]["street"].value;
 
 	if (x == "") {
 		alert("Ulica jest wymagana");
@@ -228,7 +228,7 @@ function validateFormEmail() {
 		return false;
 	}
 
-	x = document.forms["myForm"]["houseNumber"].value;
+	x = document.forms["email"]["houseNumber"].value;
 
 	if (x == "") {
 		alert("Numer domu jest wymagany");
@@ -241,7 +241,7 @@ function validateFormEmail() {
 		return false;
 	}
 
-	x = document.forms["myForm"]["flatNumber"].value;
+	x = document.forms["email"]["flatNumber"].value;
 
 	if (!(/^\d{0,4}$/.test(x)))
 	{
