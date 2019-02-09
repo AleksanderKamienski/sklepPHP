@@ -3,6 +3,7 @@
 <html >
 <head>
   <meta charset="utf-8">
+  <script type="text/javascript" src="file.js"></script>
 <link rel="stylesheet" href="main.css" type="text/css" />
 	<style type="text/css">
 			body {
