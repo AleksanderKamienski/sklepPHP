@@ -20,18 +20,9 @@
 <?PHP
 
 session_start();
-$i=0;
 
-/*
-if(!(isset($_SESSION['zalogowany'])))
-{
-	header('Location: https://demo-php-store.herokuapp.com/_sklepInternetowy.php');
-	exit();
-}*/
 
-echo '[<a href="https://demo-php-store.herokuapp.com/_logout.php">Wyloguj sie!</a>]</p>';
-echo '[<a href="https://demo-php-store.herokuapp.com/_konto.php">Wróć do dodawania produktów!</a>]</p>';
-
+$_SESSION['nie_numer'] = "";
 
 require_once "_connect.php";
 
@@ -186,24 +177,7 @@ else
 	}
 	
 		
-	/*
-	if(!empty($_POST["lista"]))
-	{
-		echo "asas";
-		foreach((array)$_POST["lista"] as $wartosc){
-		
-		if($wartość != "")	
-		{
-		echo $wartosc;
-		//$sql="UPDATE produkty SET cena=.'"$wartosc"'. WHERE id=."$i".;";
-		echo $sql;
-		//$sql="delete from daneosobowe_produkty where daneosobowe_produkty.ID = ".$wartosc."";
-		//$rezultat = @$polaczenie->query($sql);
-		}
-		$i=$i+1;
 
-		}*/
-	
 	
 	header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
 	$polaczenie->close();
