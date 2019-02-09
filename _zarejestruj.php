@@ -28,8 +28,8 @@ else
 			}
 			else
 			{
-					if(isset($_SESSION['blad']))
-					unset($_SESSION['blad']);
+					if(isset($_SESSION['blad_rejestracja']))
+					unset($_SESSION['blad_rejestracja']);
 				
 				if ($_POST["flatNumber"] == NULL)
 					{
