@@ -88,8 +88,8 @@ else
 				  <tr> 
 				  <td></td>
 				  <td></td>
+				  <td><input style="padding:10px;margin:20px;" name="przycisk" type="submit" value="Dodaj do koszyka" /></td>
 				  <td></td>
-				  <td><input style="padding:10px;margin:20px;" name="przycisk" type="submit" value="Dodaj do koszyka" /></td> 
 				  
 				  </tr>
 				 </table>
@@ -97,7 +97,7 @@ else
 		
         
 		</div> 
-		<!--<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">-->
+		<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">
 		<div class="tabelka">
 		<h2>Zmień cenę produktów:</h2> 
 			<h2>wpisz nową cenę i </h2>
