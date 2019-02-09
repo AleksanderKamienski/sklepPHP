@@ -65,25 +65,7 @@ else
 				echo($_SESSION['blad']);
 			?>
 			</form>
-        </div> 
-        <div class="tresc"> 
-			Należy być zalogowanym w celu dodania produktu do koszyka 
-			<br></br>
-            Produkty, które mogą państwo u nas kupić:
-						<br></br>
-				<table style="width:100%">
-				<?php foreach ($rezultat as $wartosc) : ?>
-					<tr>
-						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
-						<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>
-						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
-					</tr>
-					<?php endforeach ?>
-				 
-				 </table>
-        </div> 
-		<div class="menu"> 
-				<h1>Formularz rejestracyjny</h1>
+			<h1>Formularz rejestracyjny</h1>
 					<p><span class="error">* wymagane pola</span></p>
 
 					 <form name="myForm" method="post" action="https://demo-php-store.herokuapp.com/_zapisujemy.php" onsubmit="return validateForm();"> 
@@ -127,8 +109,25 @@ else
 							echo($_SESSION['blad_rejestracja']);
 						?>
 
-					  </form>
+					  </form>			
         </div> 
+        <div class="tresc"> 
+			Należy być zalogowanym w celu dodania produktu do koszyka 
+			<br></br>
+            Produkty, które mogą państwo u nas kupić:
+						<br></br>
+				<table style="width:100%">
+				<?php foreach ($rezultat as $wartosc) : ?>
+					<tr>
+						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
+						<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>
+						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
+					</tr>
+					<?php endforeach ?>
+				 
+				 </table>
+        </div> 
+
         
     </div>
 	<div class="stopka">W razie pytań prosimy o kontakt! e-mail: sklep-majster@gmail.com, telefon: 000 000 000</div> 
