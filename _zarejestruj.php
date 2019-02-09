@@ -28,6 +28,8 @@ else
 			}
 			else
 			{
+					if(isset($_SESSION['blad']))
+					unset($_SESSION['blad']);
 				
 				if ($_POST["flatNumber"] == NULL)
 					{
