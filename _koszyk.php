@@ -90,7 +90,6 @@ else
 			<div>
 			Zamówienie:
 			<p><span class="error">* wymagane pola</span></p>
-			<br></br>
 			<form name ="email" method="post" action="mailto:aleksanderkamienski.97@wp.pl?subject=zamowienie" enctype="text/plain" onsubmit="return validateFormEmail();">
 				Imię: <input type="text" name="name" value="<?php echo $name;?>" maxlength = "30">
 					  <span class="error">* </span>
