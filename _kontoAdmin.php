@@ -103,7 +103,7 @@ else
 			<?php
 				echo "Wpisz nową cenę i wciśnij przycisk 'Zmień'. Musisz podać liczbę dodatnią. Jeśli nie chcesz zmienić ceny pozostaw puste pole."
 			?>
-			<br>
+			<br></br>
 			<table>
 					<tr>
 						<td>Produkt:</td>
