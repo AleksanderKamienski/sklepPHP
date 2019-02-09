@@ -22,6 +22,8 @@
 session_start();
 
 
+
+if(isset($_SESSION['nie_numer']))
 $_SESSION['nie_numer'] = "";
 
 require_once "_connect.php";
@@ -38,7 +40,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["MLOTEK"]." WHERE id=1;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="")
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -49,7 +51,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["WIERTARKA"]." WHERE id=2;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="")
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -60,7 +62,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["GWOZDZIE"]." WHERE id=3;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -71,7 +73,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["LOM"]." WHERE id=4;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -82,7 +84,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["PILARKA"]." WHERE id=5;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -93,7 +95,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["BRZESZCZOT"]." WHERE id=6;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -104,7 +106,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["SUWMIARKA"]." WHERE id=7;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -115,7 +117,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["OLOWEK"]." WHERE id=8;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -126,7 +128,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["HEBEL"]." WHERE id=9;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -137,7 +139,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["SRUBOKRET"]." WHERE id=10;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -148,7 +150,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["KOMBINERKI"]." WHERE id=11;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -159,7 +161,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["ELEKTRODY"]." WHERE id=12;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');
@@ -170,7 +172,7 @@ else
 			$sql="UPDATE produkty SET cena=".$_POST["KATOWKA"]." WHERE id=13;";
 			$polaczenie->query($sql);
 		}
-	else 
+	else if ($_POST["MLOTEK"]!="") 
 	{
 		$_SESSION['nie_numer'] = '<span style="color:red">podaj liczbę dodatnią</span>';
 			header('Location: https://demo-php-store.herokuapp.com/_kontoAdmin.php');

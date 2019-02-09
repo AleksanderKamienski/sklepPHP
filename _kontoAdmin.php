@@ -54,6 +54,37 @@ else
             <h2>Sprawdź swój koszyk</h2> 
 			<td><input type="submit" value="Sprawdź koszyk"/></td>
 			</form>
+			<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">
+            <h2>Zmień cenę produktów.</h2> 
+			<h2>wpisz nową cenę i</h2>
+			<h2>wciśnij przycisk "zmień"</h2>
+			<?php
+				if(isset($_SESSION['nie_numer']))
+				echo($_SESSION['nie_numer']);
+			?>
+			<table>
+					<tr>
+						<td>Produkt:</td>
+						<!--<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>-->
+						<td>Cena:</td>
+						<td>Wpisz nową cenę</td>
+					</tr>
+				<?php foreach ($rezultat as $wartosc) : ?>
+					<tr>
+						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
+						
+						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
+						<td><input type="text" name=<?= htmlspecialchars($wartosc['NAZWA']) ?> maxlength = "4" ></td>
+					</tr>
+					<?php endforeach ?>
+					<tr> 
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><input style="padding:10px;margin:20px;" name="przycisk" type="submit" value="Zmień" /></td> 
+					</tr>
+			<table>
+			</form>
         </div> 
 
         <div class="tresc"> 
@@ -97,37 +128,7 @@ else
         
 		</div> 
 		<!--<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">-->
-		<div class="tabelka"> 
-			<form name ="zmien_cene" method = post  action ="https://demo-php-store.herokuapp.com/_zmiencene.php">
-            <h2>Zmień cenę produktów, jeśli nie chcesz zmieniać zostaw puste pole</h2> 
-			<?php
-				if(isset($_SESSION['nie_numer']))
-				echo($_SESSION['nie_numer']);
-			?>
-			<table>
-					<tr>
-						<td>Produkt:</td>
-						<!--<td><img class="obraz" src=<?="".$wartosc["NAZWA"].".jpg"?> alt="zdjecie"></td>-->
-						<td>Cena:</td>
-						<td>Wpisz nową cenę</td>
-					</tr>
-				<?php foreach ($rezultat as $wartosc) : ?>
-					<tr>
-						<td><?= htmlspecialchars($wartosc['NAZWA']) ?></td>
-						
-						<td><?php echo "cena: ".htmlspecialchars($wartosc['CENA'])." zł" ?></td>
-						<td><input type="text" name=<?= htmlspecialchars($wartosc['NAZWA']) ?> maxlength = "4" ></td>
-					</tr>
-					<?php endforeach ?>
-					<tr> 
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><input style="padding:10px;margin:20px;" name="przycisk" type="submit" value="Zmień" /></td> 
-					</tr>
-			<table>
-			</form>
-        </div> 
+
 
 
 	</div>
