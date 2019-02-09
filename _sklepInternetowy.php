@@ -104,10 +104,7 @@ else
 					  <p>
 					  <input type="submit" value="Zarejestruj się"/>
 					  </p>
-					  <?php
-						if(isset($_SESSION['blad_rejestracja']))
-							echo($_SESSION['blad_rejestracja']);
-						?>
+
 
 					  </form>			
         </div> 

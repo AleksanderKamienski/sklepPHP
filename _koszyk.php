@@ -54,8 +54,8 @@ else
 ?>
 
 
-			
-Produkty, które znajdują się w Państwa koszyku:
+			<div>
+			Produkty, które znajdują się w Państwa koszyku:
 			<br></br>
 			<form name ="dodajProdukt" method = post action = "https://demo-php-store.herokuapp.com/_usunProdukt.php">
 				<table style="width:40%">
@@ -85,7 +85,45 @@ Produkty, które znajdują się w Państwa koszyku:
 					
 				</table>
 				</form>
+			</div>
+			<div>
+			Zamówienie:
+			<br></br>
+			<form name ="dodajProdukt" method="post" action="mailto:aleksanderkamienski.97@wp.pl?subject=zamowienie" enctype="text/plain" onsubmit="return validateForm();">
+			Imię: <input type="text" name="name" value="<?php echo $name;?>" maxlength = "30">
+					  <span class="error">* </span>
+					  <br><br>
+					  Nazwisko: <input type="text" name="surname" maxlength = "30" value="<?php echo $surname;?>">
+					  <span class="error">* </span>
+					  <br><br>
+					  Login: <input type="text" name="login" maxlength = "30" value="<?php echo $surname;?>">
+					  <span class="error">* </span>
+					  <br><br>
+					  Hasło: <input type="password" name="password" maxlength = "30" value="<?php echo $surname;?>">
+					  <span class="error">* </span>
+					  <br><br>
+					  E-mail: <input type="text" name="email" maxlength = "30" value="<?php echo $email;?>">
+					  <span class="error">* </span>
+					  <br><br>
+					  Miasto: <input type="text" name="city" maxlength = "30" value="<?php echo $city;?>">
+					  <span class="error">* </span>
+					  <br><br>
+					  Kod pocztowy: <input type="text" name="zipCode" maxlength = "5" value="<?php echo $zipCode;?>">
+					  <span class="error">* </span>
+					  <br><br>
+					  Ulica: <input type="text" name="street" maxlength = "30" value="<?php echo $street;?>">
+					  <span class="error">* </span>
+					  <br><br>
+					  Numer domu: <input type="text" name="houseNumber" maxlength = "4" value="<?php echo $houseNumber;?>">
+					  <span class="error">* </span>
+					  <br><br>
+					  Numer mieszkania: <input type="text" maxlength = "4" name="flatNumber" value="<?php echo $flatNumber;?>">
+					  
+					  <p>
+					  <input type="submit" value="Zarejestruj się"/>
+					  </p>
 
-
+			
+			</form>
 </body>
 </html>
